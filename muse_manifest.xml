@@ -1,0 +1,19 @@
+<manifest alg="2" build="2015.0.2.310" opt="true" iceEnabled="true" iceMarkupVersion="2" exportTarget="other" domain="www.dosocob.cf" resolutions="1x" timestamp="1491497875997">
+  <folder name="css">
+    <file name="site_global.css" crc="4052507572"/>
+    <file name="index.css" crc="4032185617" ref="index"/>
+    <file name="about.css" crc="3902232189" ref="about"/>
+  </folder>
+  <folder name="scripts">
+    <file name="jquery-1.8.3.min.js" crc="196614522" ref="index:about"/>
+    <file name="museutils.js" crc="275725342" ref="index:about"/>
+    <file name="jquery.musemenu.js" crc="4042164668" ref="index:about"/>
+    <file name="jquery.watch.js" crc="3999102769" ref="index:about"/>
+    <file name="html5shiv.js" crc="4241844378" ref="index:about"/>
+  </folder>
+  <folder name="images">
+    <file name="untitled.jpg" crc="37400390" seo="true" ref="about"/>
+  </folder>
+  <file name="index.html" crc="3872366812" seo="true" mt="1491496553104" redirect="true"/>
+  <file name="about.html" crc="129957507" seo="true" mt="1491496662244" redirect="true"/>
+</manifest>
