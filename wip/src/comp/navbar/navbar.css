@@ -1,0 +1,20 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding-right: 40px;
+    align-items: center;
+    background-color: #03001C;
+    width: 100vw;
+    height: 100px;
+}
+.navbar a {
+    margin: 15px;
+    color: white;
+    outline: none; /* Remove default focus style */
+    cursor: default; /* Prevent pointer from changing */
+    font-size: x-large;
+}
+.navbar a:hover {
+    color: #5B8FB9;
+}

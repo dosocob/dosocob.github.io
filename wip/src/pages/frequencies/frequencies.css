@@ -1,0 +1,23 @@
+.frequentcies {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    background-color: #ffffff;
+    width: 100vw;
+}
+.frequentcies h1{
+    margin-bottom: 45px;
+    margin-top: 45px;
+}
+.products{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+
+}
+.products p {
+    padding: 20px;
+}

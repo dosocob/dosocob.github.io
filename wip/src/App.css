@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Light";   /*Can be any text*/
+  src: local("Gabriola"),
+    url("./font/Gabriola.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior:  smooth;
+  font-family: Gabriola;
+}
+
+* p {
+  font-size: xx-large;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'Anton', sans-serif;
+  background-image: url('..//src/images/background.jpg');
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: top;
+  background-color: white
+
+}
+
+Footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}

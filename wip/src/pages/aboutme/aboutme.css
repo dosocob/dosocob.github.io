@@ -1,0 +1,9 @@
+.aboutme{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    background-color: #ffffff;
+    width: 100vw;
+    height: 1500px;
+}

@@ -1,0 +1,25 @@
+.mlp {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    width: 100vw;
+    height: 2500px;
+    margin-bottom: 670px;
+}
+.title{
+    margin-bottom: 45px;
+    margin-top: 30vh;
+    font-size: 140px;
+}
+/* Set the initial state of the title to hidden */
+.title {
+    opacity: 0;
+    transition: opacity 1.44s ease-in-out;
+  }
+  
+  /* When the title is visible, show it with a fade-in animation */
+  .title.visible {
+    opacity: 1;
+    color: #100941
+  }
