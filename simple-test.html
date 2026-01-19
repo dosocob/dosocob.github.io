@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Platform Test</title>
+    <style>
+        body { background: #0a0a0f; color: white; font-family: Arial; padding: 2rem; }
+        .btn { padding: 1rem 2rem; font-size: 1.2rem; cursor: pointer; margin: 1rem; background: #667eea; color: white; border: none; border-radius: 8px; }
+        .btn:hover { background: #5568d3; }
+        #status { margin: 2rem 0; font-size: 1.1rem; line-height: 1.8; }
+        .trading-platform-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(10, 10, 15, 0.98); z-index: 10000;
+            display: none; opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .trading-platform-overlay.active {
+            display: block; opacity: 1;
+        }
+        .platform-content {
+            padding: 3rem; color: white;
+        }
+        .close-btn {
+            position: absolute; top: 2rem; right: 2rem;
+            background: #ef4444; color: white; border: none;
+            padding: 1rem 2rem; font-size: 1rem; cursor: pointer;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔧 Trading Platform Debug Test</h1>
+
+    <button class="btn" onclick="testWithDebug()">Test Platform Open (With Debug)</button>
+    <button class="btn" onclick="testDirect()">Test Direct Open</button>
+
+    <div id="status"></div>
+
+    <!-- Trading Platform Overlay -->
+    <div id="trading-platform" class="trading-platform-overlay">
+        <button class="close-btn" onclick="closeTest()">✕ CLOSE</button>
+        <div class="platform-content">
+            <h1 style="font-size: 3rem;">✅ SUCCESS!</h1>
+            <p style="font-size: 1.5rem; margin-top: 2rem;">The trading platform overlay is now visible.</p>
+            <p style="font-size: 1.2rem; color: #10b981;">If you can see this green text, everything is working correctly!</p>
+        </div>
+    </div>
+
+    <script>
+        const status = document.getElementById('status');
+
+        function log(message, color = 'white') {
+            status.innerHTML += `<div style="color: ${color};">${message}</div>`;
+        }
+
+        function clearLog() {
+            status.innerHTML = '';
+        }
+
+        function testDirect() {
+            clearLog();
+            log('🔍 Starting direct test...', 'cyan');
+
+            const overlay = document.getElementById('trading-platform');
+
+            if (!overlay) {
+                log('❌ ERROR: Overlay element not found!', 'red');
+                return;
+            }
+
+            log('✅ Overlay element found', 'green');
+            log('Current classes: ' + overlay.className);
+
+            overlay.classList.add('active');
+
+            log('✅ Added active class', 'green');
+            log('New classes: ' + overlay.className);
+            log('✅ Check if overlay is visible above!', 'lime');
+        }
+
+        function testWithDebug() {
+            clearLog();
+            log('🔍 Starting debug test...', 'cyan');
+
+            // Check overlay exists
+            const overlay = document.getElementById('trading-platform');
+            if (!overlay) {
+                log('❌ Overlay element NOT found', 'red');
+                return;
+            }
+            log('✅ Overlay element exists', 'green');
+
+            // Check computed styles before
+            const beforeStyles = window.getComputedStyle(overlay);
+            log(`Before - Display: ${beforeStyles.display}, Opacity: ${beforeStyles.opacity}`, 'yellow');
+
+            // Add active class
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+
+            // Check computed styles after
+            setTimeout(() => {
+                const afterStyles = window.getComputedStyle(overlay);
+                log(`After - Display: ${afterStyles.display}, Opacity: ${afterStyles.opacity}`, 'yellow');
+
+                if (afterStyles.display === 'block' && afterStyles.opacity === '1') {
+                    log('✅ Overlay should be visible!', 'lime');
+                } else {
+                    log('❌ Overlay might not be visible', 'red');
+                    log('Check CSS or browser console for errors', 'orange');
+                }
+            }, 100);
+        }
+
+        function closeTest() {
+            const overlay = document.getElementById('trading-platform');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+            log('Platform closed', 'cyan');
+        }
+
+        log('✅ Page loaded successfully', 'green');
+        log('Click a button above to test', 'white');
+    </script>
+</body>
+</html>

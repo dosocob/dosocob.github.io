@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Platform Test</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/trading.css">
+</head>
+<body>
+    <h1 style="color: white; padding: 2rem;">Trading Platform Test</h1>
+
+    <button onclick="testOpen()" style="padding: 1rem 2rem; font-size: 1.2rem; cursor: pointer; margin: 2rem;">
+        Click to Test Platform Open
+    </button>
+
+    <div id="status" style="color: white; padding: 2rem; font-size: 1.2rem;"></div>
+
+    <!-- Trading Platform Full Page -->
+    <div id="trading-platform" class="trading-platform-overlay">
+        <div class="trading-platform-container">
+            <div class="platform-header">
+                <div class="platform-title">
+                    <h1>📈 AI Trading Analytics Platform</h1>
+                    <span class="beta-badge">BETA</span>
+                </div>
+                <button class="close-platform" onclick="closeTradingPlatform()">
+                    <span>Close</span>
+                </button>
+            </div>
+            <div style="padding: 2rem; color: white; font-size: 1.5rem;">
+                <p>✅ Platform is working!</p>
+                <p>If you can see this, the overlay is opening correctly.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="/assets/trading.js"></script>
+
+    <script>
+        function testOpen() {
+            const status = document.getElementById('status');
+            status.innerHTML = 'Testing...<br>';
+
+            // Check if function exists
+            if (typeof openTradingPlatform === 'function') {
+                status.innerHTML += '✅ openTradingPlatform function exists<br>';
+            } else {
+                status.innerHTML += '❌ openTradingPlatform function NOT found<br>';
+                return;
+            }
+
+            // Check if overlay exists
+            const overlay = document.getElementById('trading-platform');
+            if (overlay) {
+                status.innerHTML += '✅ Overlay element exists<br>';
+            } else {
+                status.innerHTML += '❌ Overlay element NOT found<br>';
+                return;
+            }
+
+            // Try to open
+            try {
+                openTradingPlatform();
+                status.innerHTML += '✅ Function executed successfully<br>';
+
+                // Check if active class was added
+                if (overlay.classList.contains('active')) {
+                    status.innerHTML += '✅ Active class added<br>';
+                } else {
+                    status.innerHTML += '❌ Active class NOT added<br>';
+                }
+            } catch (error) {
+                status.innerHTML += '❌ Error: ' + error.message + '<br>';
+            }
+        }
+
+        // Auto-run test on load
+        window.addEventListener('load', () => {
+            console.log('Page loaded. Functions available:', {
+                openTradingPlatform: typeof openTradingPlatform,
+                closeTradingPlatform: typeof closeTradingPlatform
+            });
+        });
+    </script>
+</body>
+</html>
