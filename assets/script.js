@@ -279,23 +279,38 @@
             submitBtn.disabled = true;
             submitBtn.style.opacity = '0.7';
 
-            // Simulate form submission (replace with actual API call)
+            // Actually submit to Formspree
+            try {
+                const formData = new FormData(contactForm);
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Show success message
+                    submitBtn.querySelector('span').textContent = 'Message Sent!';
+                    submitBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+                    contactForm.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                // Show error message
+                submitBtn.querySelector('span').textContent = 'Error! Try again';
+                submitBtn.style.background = 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)';
+            }
+
+            // Reset button after 3 seconds
             setTimeout(() => {
-                // Show success message
-                submitBtn.querySelector('span').textContent = 'Message Sent!';
-                submitBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
-
-                // Reset form
-                contactForm.reset();
-
-                // Reset button after 3 seconds
-                setTimeout(() => {
-                    submitBtn.querySelector('span').textContent = originalText;
-                    submitBtn.style.background = '';
-                    submitBtn.style.opacity = '1';
-                    submitBtn.disabled = false;
-                }, 3000);
-            }, 1500);
+                submitBtn.querySelector('span').textContent = originalText;
+                submitBtn.style.background = '';
+                submitBtn.style.opacity = '1';
+                submitBtn.disabled = false;
+            }, 3000);
         });
 
         // Add floating label effect

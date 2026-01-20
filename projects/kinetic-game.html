@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kinetic Game - A surfing and bhopping game with smooth movement mechanics">
+    <title>Kinetic Game | dosocob</title>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/style.css">
+    <style>
+        .project-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+        }
+        .project-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .project-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        .project-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        .project-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+        .project-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .project-details {
+            padding: 80px 0;
+        }
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .detail-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+        }
+        .detail-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        .detail-card p, .detail-card li {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        .detail-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .detail-card li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        .detail-card li::before {
+            content: ">";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .tech-tag {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-bottom: 30px;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <span class="logo-text">dosocob</span>
+                <span class="logo-dot">.</span>
+            </a>
+            <div class="nav-links">
+                <a href="/#about" class="nav-link">About</a>
+                <a href="/#skills" class="nav-link">Skills</a>
+                <a href="/#projects" class="nav-link">Projects</a>
+                <a href="/#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <a href="/#projects" class="back-link">< Back to Projects</a>
+            <div class="project-hero-content">
+                <div class="project-icon">🏄</div>
+                <h1 class="project-title gradient-text">Kinetic Game</h1>
+                <p class="project-subtitle">A surfing and bhopping game with smooth movement mechanics and challenging gameplay</p>
+                <div class="project-links">
+                    <a href="https://github.com/dosocob/kinetic-game" target="_blank" class="btn btn-primary">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <section class="project-details">
+        <div class="container">
+            <div class="detail-grid">
+                <div class="detail-card">
+                    <h3>About the Project</h3>
+                    <p>Kinetic Game is a movement-focused game inspired by the surfing and bunny hopping mechanics found in Source engine games. The game emphasizes fluid player movement and skill-based gameplay.</p>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Smooth surfing mechanics</li>
+                        <li>Bunny hopping (bhopping) system</li>
+                        <li>Physics-based movement</li>
+                        <li>Challenging level design</li>
+                        <li>Speed and momentum gameplay</li>
+                    </ul>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Technologies Used</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Game Development</span>
+                        <span class="tech-tag">Physics Engine</span>
+                        <span class="tech-tag">Movement Systems</span>
+                        <span class="tech-tag">Level Design</span>
+                    </div>
+                </div>
+
+                <div class="detail-card">
+                    <h3>Development</h3>
+                    <p>This project showcases custom physics implementation for creating satisfying movement mechanics. The game focuses on player skill progression and mastering movement techniques.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2024 dosocob. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="/" class="footer-link">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/assets/script.js"></script>
+</body>
+</html>
