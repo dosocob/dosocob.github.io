@@ -257,10 +257,10 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" onclick="openProjectModal('kinetic-game')" style="cursor: pointer;">
                     <div class="project-image">
                         <div class="project-overlay">
-                            <a href="/projects/kinetic-game.html" class="project-link">View Project →</a>
+                            <span class="project-link">View Details →</span>
                         </div>
                         <div class="project-thumbnail" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
                             <span class="project-emoji">🏄</span>
@@ -277,10 +277,10 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" onclick="openProjectModal('kinetic-launcher')" style="cursor: pointer;">
                     <div class="project-image">
                         <div class="project-overlay">
-                            <a href="/projects/kinetic-launcher.html" class="project-link">View Project →</a>
+                            <span class="project-link">View Details →</span>
                         </div>
                         <div class="project-thumbnail" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
                             <span class="project-emoji">🚀</span>
@@ -847,6 +847,87 @@
         </div>
     </div>
 
+    <!-- Project Modals -->
+    <div id="kinetic-game-modal" class="project-modal-overlay" onclick="closeProjectModal(event, 'kinetic-game')">
+        <div class="project-modal" onclick="event.stopPropagation()">
+            <button class="close-modal" onclick="closeProjectModal(event, 'kinetic-game')">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="modal-header">
+                <span class="modal-icon">🏄</span>
+                <h2>Kinetic Game</h2>
+            </div>
+            <div class="modal-content">
+                <p class="modal-description">A surfing and bhopping game with smooth movement mechanics inspired by Source engine games. The game emphasizes fluid player movement and skill-based gameplay.</p>
+
+                <div class="modal-section">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Smooth surfing mechanics</li>
+                        <li>Bunny hopping (bhopping) system</li>
+                        <li>Physics-based movement</li>
+                        <li>Challenging level design</li>
+                        <li>Speed and momentum gameplay</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Technologies</h3>
+                    <div class="modal-tech-tags">
+                        <span>Game Development</span>
+                        <span>Physics Engine</span>
+                        <span>Movement Systems</span>
+                        <span>Level Design</span>
+                    </div>
+                </div>
+
+                <a href="https://github.com/dosocob/kinetic-game" target="_blank" class="btn btn-primary modal-btn">View on GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="kinetic-launcher-modal" class="project-modal-overlay" onclick="closeProjectModal(event, 'kinetic-launcher')">
+        <div class="project-modal" onclick="event.stopPropagation()">
+            <button class="close-modal" onclick="closeProjectModal(event, 'kinetic-launcher')">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="modal-header">
+                <span class="modal-icon">🚀</span>
+                <h2>Kinetic Launcher</h2>
+            </div>
+            <div class="modal-content">
+                <p class="modal-description">A desktop application designed to manage and update the Kinetic game. It provides a seamless experience for players to keep their game up-to-date and easily launch into gameplay.</p>
+
+                <div class="modal-section">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Automatic game updates</li>
+                        <li>One-click game launching</li>
+                        <li>Version management</li>
+                        <li>Download progress tracking</li>
+                        <li>Clean, modern UI</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Technologies</h3>
+                    <div class="modal-tech-tags">
+                        <span>Desktop Application</span>
+                        <span>Auto-Update System</span>
+                        <span>Version Control</span>
+                        <span>UI/UX Design</span>
+                    </div>
+                </div>
+
+                <a href="https://github.com/dosocob/kinetic-launcher" target="_blank" class="btn btn-primary modal-btn">View on GitHub</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
@@ -877,7 +958,7 @@
                     </div>
                 </div>
 
-                <form class="contact-form" id="contactForm" action="https://formspree.io/f/dosocob@gmail.com" method="POST">
+                <form class="contact-form" id="contactForm" action="https://formsubmit.co/dosocob@gmail.com" method="POST">
                     <div class="form-group">
                         <label for="name">Your Name</label>
                         <input type="text" id="name" name="name" required placeholder="John Doe">
@@ -891,6 +972,8 @@
                         <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
                     </div>
                     <input type="hidden" name="_subject" value="New message from your portfolio site">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://dosocob.github.io/#contact">
                     <button type="submit" class="btn btn-primary btn-submit">
                         <span>Send Message</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none">

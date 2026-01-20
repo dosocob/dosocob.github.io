@@ -537,3 +537,35 @@
     document.body.insertBefore(skipLink, document.body.firstChild);
 
 })();
+
+// ================================
+// PROJECT MODAL FUNCTIONS
+// ================================
+
+function openProjectModal(projectId) {
+    const modal = document.getElementById(projectId + '-modal');
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeProjectModal(event, projectId) {
+    event.stopPropagation();
+    const modal = document.getElementById(projectId + '-modal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
+// Close modal on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        const activeModal = document.querySelector('.project-modal-overlay.active');
+        if (activeModal) {
+            activeModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+});
