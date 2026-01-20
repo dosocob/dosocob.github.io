@@ -569,3 +569,18 @@ document.addEventListener('keydown', (e) => {
         }
     }
 });
+
+// Copy Discord username to clipboard
+function copyDiscord() {
+    const discordName = 'dosocob';
+    navigator.clipboard.writeText(discordName).then(() => {
+        const discordSpan = document.getElementById('discord-name');
+        const originalText = discordSpan.textContent;
+        discordSpan.textContent = 'Copied!';
+        discordSpan.style.color = '#10b981';
+        setTimeout(() => {
+            discordSpan.textContent = originalText;
+            discordSpan.style.color = '';
+        }, 2000);
+    });
+}
