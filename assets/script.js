@@ -584,3 +584,24 @@ function copyDiscord() {
         }, 2000);
     });
 }
+
+// ================================
+// SKILL MODAL FUNCTIONS
+// ================================
+
+function openSkillModal(skillId) {
+    const modal = document.getElementById(skillId + '-modal');
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeSkillModal(event, skillId) {
+    event.stopPropagation();
+    const modal = document.getElementById(skillId + '-modal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
