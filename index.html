@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/style.css">
-    <link rel="stylesheet" href="/assets/trading.css">
 </head>
 <body>
     <!-- Animated Background -->
@@ -153,57 +152,56 @@
                 <h2 class="section-title">Skills & Expertise</h2>
             </div>
             <div class="skills-grid">
-                <div class="skill-card" data-skill="frontend">
+                <div class="skill-card" data-skill="gamedev">
+                    <div class="skill-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="6" y="12" width="28" height="16" rx="3" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="14" cy="20" r="3" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="28" cy="18" r="1.5" fill="currentColor"/>
+                            <circle cx="28" cy="22" r="1.5" fill="currentColor"/>
+                            <circle cx="26" cy="20" r="1.5" fill="currentColor"/>
+                            <circle cx="30" cy="20" r="1.5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Game Development</h3>
+                    <p>Building games with smooth physics and movement mechanics</p>
+                    <div class="skill-tags">
+                        <span>Physics</span>
+                        <span>Movement Systems</span>
+                        <span>Level Design</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-skill="desktop">
+                    <div class="skill-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="5" y="8" width="30" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M15 28 H25 M20 28 V32 M14 32 H26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Desktop Applications</h3>
+                    <p>Creating native desktop apps with auto-update systems</p>
+                    <div class="skill-tags">
+                        <span>Launchers</span>
+                        <span>Auto-Updates</span>
+                        <span>Cross-Platform</span>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-skill="cli">
                     <div class="skill-icon">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
                             <rect x="5" y="8" width="30" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
-                            <path d="M5 14 H35" stroke="currentColor" stroke-width="2"/>
-                            <circle cx="10" cy="11" r="1" fill="currentColor"/>
-                            <circle cx="14" cy="11" r="1" fill="currentColor"/>
-                            <circle cx="18" cy="11" r="1" fill="currentColor"/>
+                            <path d="M10 16 L15 20 L10 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18 24 H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                     </div>
-                    <h3>Frontend Development</h3>
-                    <p>Building responsive and interactive user interfaces with modern frameworks</p>
+                    <h3>CLI & Networking</h3>
+                    <p>Command-line tools and real-time communication apps</p>
                     <div class="skill-tags">
-                        <span>React</span>
-                        <span>Vue</span>
-                        <span>TypeScript</span>
-                        <span>CSS3</span>
-                    </div>
-                </div>
-
-                <div class="skill-card" data-skill="backend">
-                    <div class="skill-icon">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                            <rect x="8" y="10" width="24" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
-                            <path d="M12 16 H28 M12 20 H24 M12 24 H28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3>Backend Development</h3>
-                    <p>Creating robust server-side applications and RESTful APIs</p>
-                    <div class="skill-tags">
-                        <span>Node.js</span>
-                        <span>Python</span>
-                        <span>PostgreSQL</span>
-                        <span>MongoDB</span>
-                    </div>
-                </div>
-
-                <div class="skill-card" data-skill="design">
-                    <div class="skill-icon">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                            <circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="2"/>
-                            <path d="M20 8 L20 20 L28 28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <h3>UI/UX Design</h3>
-                    <p>Designing intuitive and beautiful user experiences</p>
-                    <div class="skill-tags">
-                        <span>Figma</span>
-                        <span>Adobe XD</span>
-                        <span>Prototyping</span>
-                        <span>Animation</span>
+                        <span>Terminal Apps</span>
+                        <span>Networking</span>
+                        <span>Real-Time</span>
                     </div>
                 </div>
 
@@ -214,13 +212,12 @@
                             <circle cx="20" cy="20" r="4" stroke="currentColor" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3>Tools & DevOps</h3>
-                    <p>Efficient development workflow and deployment</p>
+                    <h3>Tools & Version Control</h3>
+                    <p>Efficient development workflow and collaboration</p>
                     <div class="skill-tags">
                         <span>Git</span>
-                        <span>Docker</span>
-                        <span>AWS</span>
-                        <span>CI/CD</span>
+                        <span>GitHub</span>
+                        <span>Python</span>
                     </div>
                 </div>
             </div>
@@ -235,24 +232,22 @@
                 <h2 class="section-title">Featured Projects</h2>
             </div>
             <div class="projects-grid">
-                <div class="project-card featured-project" data-project="trading">
+                <div class="project-card" onclick="openProjectModal('chat-cli')" style="cursor: pointer;">
                     <div class="project-image">
                         <div class="project-overlay">
-                            <a href="#trading-platform" class="project-link" onclick="openTradingPlatform(event)">Launch Platform →</a>
+                            <span class="project-link">View Details →</span>
                         </div>
                         <div class="project-thumbnail" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
-                            <span class="project-emoji">📈</span>
+                            <span class="project-emoji">💬</span>
                         </div>
-                        <div class="live-badge">🔴 LIVE</div>
                     </div>
                     <div class="project-info">
-                        <h3>AI Trading Analytics Platform</h3>
-                        <p>Real-time stock & crypto analytics with AI predictions, news sentiment analysis, backtesting, and paper trading simulator</p>
+                        <h3>Chat-CLI</h3>
+                        <p>A command-line chat application for real-time messaging directly from your terminal</p>
                         <div class="project-tech">
-                            <span>AI/ML</span>
-                            <span>TradingView</span>
-                            <span>Real-Time Data</span>
-                            <span>MCP Server</span>
+                            <span>CLI</span>
+                            <span>Networking</span>
+                            <span>Real-Time</span>
                         </div>
                     </div>
                 </div>
@@ -300,554 +295,45 @@
         </div>
     </section>
 
-    <!-- Trading Platform Full Page -->
-    <div id="trading-platform" class="trading-platform-overlay">
-        <div class="trading-platform-container">
-            <div class="platform-header">
-                <div class="platform-title">
-                    <h1>📈 AI Trading Analytics Platform</h1>
-                    <span class="beta-badge">BETA</span>
-                </div>
-                <button class="close-platform" onclick="closeTradingPlatform()">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </button>
+    <!-- Project Modals -->
+    <div id="chat-cli-modal" class="project-modal-overlay" onclick="closeProjectModal(event, 'chat-cli')">
+        <div class="project-modal" onclick="event.stopPropagation()">
+            <button class="close-modal" onclick="closeProjectModal(event, 'chat-cli')">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="modal-header">
+                <span class="modal-icon">💬</span>
+                <h2>Chat-CLI</h2>
             </div>
+            <div class="modal-content">
+                <p class="modal-description">A command-line chat application that enables real-time messaging directly from your terminal. Built for developers who prefer working in the command line.</p>
 
-            <!-- Tab Navigation -->
-            <div class="tab-navigation">
-                <button class="tab-btn active" data-tab="dashboard">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <rect x="2" y="2" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                        <rect x="11" y="2" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                        <rect x="2" y="11" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                        <rect x="11" y="11" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1.5"/>
-                    </svg>
-                    <span>Dashboard</span>
-                </button>
-                <button class="tab-btn" data-tab="trading">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M2 10L6 6L10 10L18 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                        <path d="M2 18L2 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-                    <span>Live Trading</span>
-                </button>
-                <button class="tab-btn" data-tab="backtest">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <rect x="2" y="8" width="3" height="10" rx="1" fill="currentColor"/>
-                        <rect x="6" y="4" width="3" height="14" rx="1" fill="currentColor"/>
-                        <rect x="10" y="10" width="3" height="8" rx="1" fill="currentColor"/>
-                        <rect x="14" y="6" width="3" height="12" rx="1" fill="currentColor"/>
-                    </svg>
-                    <span>Backtest</span>
-                </button>
-                <button class="tab-btn" data-tab="ai">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
-                        <path d="M10 6V14M6 10H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-                    <span>AI Predictions</span>
-                </button>
-                <button class="tab-btn" data-tab="news">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <rect x="2" y="3" width="16" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/>
-                        <path d="M5 7H15M5 10H12M5 13H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-                    </svg>
-                    <span>News & Sentiment</span>
-                </button>
-                <button class="tab-btn" data-tab="portfolio">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M10 2L12 7H17L13 10L15 16L10 12L5 16L7 10L3 7H8L10 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-                    </svg>
-                    <span>Portfolio</span>
-                </button>
-            </div>
+                <div class="modal-section">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Real-time messaging in terminal</li>
+                        <li>Lightweight and fast</li>
+                        <li>Easy to use CLI interface</li>
+                        <li>Cross-platform support</li>
+                    </ul>
+                </div>
 
-            <!-- Tab Content -->
-            <div class="tab-content-container">
-                <!-- Dashboard Tab -->
-                <div class="tab-content active" id="tab-dashboard">
-                    <div class="dashboard-grid">
-                        <!-- Market Overview -->
-                        <div class="dashboard-card market-overview">
-                            <h3>Market Overview</h3>
-                            <div class="market-stats">
-                                <div class="stat-box">
-                                    <span class="stat-label">S&P 500</span>
-                                    <span class="stat-value" id="sp500-value">Loading...</span>
-                                    <span class="stat-change positive" id="sp500-change">+0.00%</span>
-                                </div>
-                                <div class="stat-box">
-                                    <span class="stat-label">NASDAQ</span>
-                                    <span class="stat-value" id="nasdaq-value">Loading...</span>
-                                    <span class="stat-change positive" id="nasdaq-change">+0.00%</span>
-                                </div>
-                                <div class="stat-box">
-                                    <span class="stat-label">BTC/USD</span>
-                                    <span class="stat-value" id="btc-value">Loading...</span>
-                                    <span class="stat-change" id="btc-change">+0.00%</span>
-                                </div>
-                                <div class="stat-box">
-                                    <span class="stat-label">ETH/USD</span>
-                                    <span class="stat-value" id="eth-value">Loading...</span>
-                                    <span class="stat-change" id="eth-change">+0.00%</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- AI Predictions -->
-                        <div class="dashboard-card ai-signals">
-                            <h3>🤖 AI Predictions</h3>
-                            <div class="signal-list" id="ai-signals">
-                                <div class="signal-item">
-                                    <div class="signal-header">
-                                        <span class="signal-symbol">AAPL</span>
-                                        <span class="signal-badge bullish">BULLISH</span>
-                                    </div>
-                                    <div class="signal-details">
-                                        <span>Confidence: <strong>87%</strong></span>
-                                        <span>Target: <strong>$195.50</strong></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Quick Stats -->
-                        <div class="dashboard-card quick-stats">
-                            <h3>Performance</h3>
-                            <div class="stats-list">
-                                <div class="stat-row">
-                                    <span>Win Rate</span>
-                                    <span class="stat-value-sm">72.5%</span>
-                                </div>
-                                <div class="stat-row">
-                                    <span>Total Trades</span>
-                                    <span class="stat-value-sm">156</span>
-                                </div>
-                                <div class="stat-row">
-                                    <span>Avg. Profit</span>
-                                    <span class="stat-value-sm positive">+2.3%</span>
-                                </div>
-                                <div class="stat-row">
-                                    <span>Sharpe Ratio</span>
-                                    <span class="stat-value-sm">1.85</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Recent News -->
-                        <div class="dashboard-card recent-news">
-                            <h3>📰 Latest News</h3>
-                            <div class="news-feed" id="news-feed">
-                                <div class="news-item">
-                                    <div class="news-sentiment positive">Positive</div>
-                                    <div class="news-content">
-                                        <h4>Loading market news...</h4>
-                                        <span class="news-time">Just now</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="modal-section">
+                    <h3>Technologies</h3>
+                    <div class="modal-tech-tags">
+                        <span>Command Line</span>
+                        <span>Networking</span>
+                        <span>Real-Time Communication</span>
                     </div>
                 </div>
 
-                <!-- Live Trading Tab -->
-                <div class="tab-content" id="tab-trading">
-                    <div class="trading-layout">
-                        <!-- Symbol Selector -->
-                        <div class="symbol-selector">
-                            <div class="selector-group">
-                                <label>Asset Type:</label>
-                                <select id="asset-type" onchange="changeAssetType()">
-                                    <option value="stocks">Stocks</option>
-                                    <option value="crypto">Cryptocurrency</option>
-                                    <option value="forex">Forex</option>
-                                </select>
-                            </div>
-                            <div class="selector-group">
-                                <label>Symbol:</label>
-                                <input type="text" id="symbol-input" placeholder="AAPL" value="AAPL">
-                                <button onclick="loadSymbol()" class="btn-load">Load</button>
-                            </div>
-                            <div class="selector-group">
-                                <label>Timeframe:</label>
-                                <select id="timeframe">
-                                    <option value="1">1 min</option>
-                                    <option value="5">5 min</option>
-                                    <option value="15" selected>15 min</option>
-                                    <option value="30">30 min</option>
-                                    <option value="60">1 hour</option>
-                                    <option value="D">Daily</option>
-                                    <option value="W">Weekly</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- TradingView Chart -->
-                        <div class="chart-container">
-                            <div id="tradingview-chart" class="tradingview-chart">
-                                <!-- Chart will be rendered here -->
-                                <div class="chart-placeholder">
-                                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
-                                        <path d="M10 60L30 40L50 55L70 30L90 45" stroke="url(#gradient)" stroke-width="3" stroke-linecap="round"/>
-                                        <defs>
-                                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                                <stop offset="0%" stop-color="#667eea"/>
-                                                <stop offset="100%" stop-color="#764ba2"/>
-                                            </linearGradient>
-                                        </defs>
-                                    </svg>
-                                    <h3>Real-Time Chart</h3>
-                                    <p>Select a symbol to view live trading data</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Trading Panel -->
-                        <div class="trading-panel">
-                            <h3>Paper Trading</h3>
-                            <div class="balance-info">
-                                <div class="balance-item">
-                                    <span>Cash</span>
-                                    <strong id="cash-balance">$100,000</strong>
-                                </div>
-                                <div class="balance-item">
-                                    <span>Portfolio Value</span>
-                                    <strong id="portfolio-value">$100,000</strong>
-                                </div>
-                            </div>
-
-                            <div class="order-form">
-                                <div class="order-tabs">
-                                    <button class="order-tab active" data-order="buy">Buy</button>
-                                    <button class="order-tab" data-order="sell">Sell</button>
-                                </div>
-
-                                <div class="form-group-trade">
-                                    <label>Order Type</label>
-                                    <select id="order-type">
-                                        <option value="market">Market</option>
-                                        <option value="limit">Limit</option>
-                                        <option value="stop">Stop</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group-trade">
-                                    <label>Quantity</label>
-                                    <input type="number" id="quantity" value="1" min="1">
-                                </div>
-
-                                <div class="form-group-trade" id="limit-price-group" style="display: none;">
-                                    <label>Limit Price</label>
-                                    <input type="number" id="limit-price" step="0.01">
-                                </div>
-
-                                <button class="btn-trade buy" onclick="executeTrade('buy')">
-                                    <span>Place Buy Order</span>
-                                </button>
-                            </div>
-
-                            <div class="recent-trades">
-                                <h4>Recent Orders</h4>
-                                <div id="recent-orders" class="orders-list">
-                                    <p class="no-orders">No orders yet</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Backtest Tab -->
-                <div class="tab-content" id="tab-backtest">
-                    <div class="backtest-container">
-                        <div class="backtest-config">
-                            <h3>Backtest Configuration</h3>
-
-                            <div class="config-section">
-                                <div class="form-group-bt">
-                                    <label>Symbol</label>
-                                    <input type="text" id="bt-symbol" placeholder="AAPL" value="AAPL">
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group-bt">
-                                        <label>Start Date</label>
-                                        <input type="date" id="bt-start-date" value="2024-01-01">
-                                    </div>
-                                    <div class="form-group-bt">
-                                        <label>End Date</label>
-                                        <input type="date" id="bt-end-date">
-                                    </div>
-                                </div>
-
-                                <div class="form-group-bt">
-                                    <label>Initial Capital</label>
-                                    <input type="number" id="bt-capital" value="100000" min="1000">
-                                </div>
-
-                                <div class="form-group-bt">
-                                    <label>Strategy</label>
-                                    <select id="bt-strategy">
-                                        <option value="sma-cross">SMA Crossover</option>
-                                        <option value="rsi">RSI Mean Reversion</option>
-                                        <option value="macd">MACD Trend Following</option>
-                                        <option value="bollinger">Bollinger Bands</option>
-                                        <option value="ai-ml">AI/ML Predictions</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group-bt">
-                                    <label>Timeframe</label>
-                                    <select id="bt-timeframe">
-                                        <option value="5">5 min</option>
-                                        <option value="15" selected>15 min</option>
-                                        <option value="60">1 hour</option>
-                                        <option value="D">Daily</option>
-                                        <option value="W">Weekly</option>
-                                    </select>
-                                </div>
-
-                                <button class="btn-primary" onclick="runBacktest()">
-                                    <span>Run Backtest</span>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="backtest-results">
-                            <h3>Results</h3>
-                            <div id="backtest-results-content">
-                                <div class="results-placeholder">
-                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
-                                        <rect x="10" y="30" width="12" height="40" rx="2" fill="url(#grad1)"/>
-                                        <rect x="26" y="20" width="12" height="50" rx="2" fill="url(#grad1)"/>
-                                        <rect x="42" y="35" width="12" height="35" rx="2" fill="url(#grad1)"/>
-                                        <rect x="58" y="25" width="12" height="45" rx="2" fill="url(#grad1)"/>
-                                        <defs>
-                                            <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
-                                                <stop offset="0%" stop-color="#667eea"/>
-                                                <stop offset="100%" stop-color="#764ba2"/>
-                                            </linearGradient>
-                                        </defs>
-                                    </svg>
-                                    <p>Configure and run a backtest to see results</p>
-                                </div>
-                            </div>
-
-                            <div id="backtest-metrics" class="backtest-metrics" style="display: none;">
-                                <div class="metric-card">
-                                    <span class="metric-label">Total Return</span>
-                                    <span class="metric-value" id="bt-return">+0%</span>
-                                </div>
-                                <div class="metric-card">
-                                    <span class="metric-label">Sharpe Ratio</span>
-                                    <span class="metric-value" id="bt-sharpe">0.00</span>
-                                </div>
-                                <div class="metric-card">
-                                    <span class="metric-label">Max Drawdown</span>
-                                    <span class="metric-value" id="bt-drawdown">0%</span>
-                                </div>
-                                <div class="metric-card">
-                                    <span class="metric-label">Win Rate</span>
-                                    <span class="metric-value" id="bt-winrate">0%</span>
-                                </div>
-                                <div class="metric-card">
-                                    <span class="metric-label">Total Trades</span>
-                                    <span class="metric-value" id="bt-trades">0</span>
-                                </div>
-                                <div class="metric-card">
-                                    <span class="metric-label">Profit Factor</span>
-                                    <span class="metric-value" id="bt-profit-factor">0.00</span>
-                                </div>
-                            </div>
-
-                            <div id="equity-curve" class="equity-curve" style="display: none;">
-                                <canvas id="equity-chart"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI Predictions Tab -->
-                <div class="tab-content" id="tab-ai">
-                    <div class="ai-predictions-container">
-                        <div class="ai-header">
-                            <h2>🤖 AI-Powered Market Predictions</h2>
-                            <p>Machine learning models analyzing real-time data, news sentiment, and technical indicators</p>
-                        </div>
-
-                        <div class="ai-stats">
-                            <div class="ai-stat-card">
-                                <span class="ai-stat-label">Model Accuracy</span>
-                                <span class="ai-stat-value">87.3%</span>
-                                <div class="ai-stat-trend">↑ +2.1% this week</div>
-                            </div>
-                            <div class="ai-stat-card">
-                                <span class="ai-stat-label">Predictions Made</span>
-                                <span class="ai-stat-value">1,247</span>
-                                <div class="ai-stat-trend">Last 30 days</div>
-                            </div>
-                            <div class="ai-stat-card">
-                                <span class="ai-stat-label">Learning Progress</span>
-                                <span class="ai-stat-value">Level 12</span>
-                                <div class="ai-stat-trend">1,890 iterations</div>
-                            </div>
-                        </div>
-
-                        <div class="predictions-grid">
-                            <div class="prediction-card" id="ai-predictions-list">
-                                <!-- Predictions will be populated here -->
-                            </div>
-                        </div>
-
-                        <div class="ai-training">
-                            <h3>🎓 AI Learning System</h3>
-                            <div class="training-info">
-                                <p>The AI continuously learns from its predictions and market outcomes. Recent improvements:</p>
-                                <ul class="learning-list">
-                                    <li>✅ Improved sentiment analysis accuracy by 5.2%</li>
-                                    <li>✅ Enhanced volatility prediction for crypto markets</li>
-                                    <li>✅ Optimized stop-loss recommendations</li>
-                                    <li>🔄 Training new model on 2024 market data...</li>
-                                </ul>
-                            </div>
-                            <button class="btn-secondary" onclick="retrainModel()">
-                                <span>Retrain Model with Latest Data</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- News & Sentiment Tab -->
-                <div class="tab-content" id="tab-news">
-                    <div class="news-sentiment-container">
-                        <div class="news-header">
-                            <h2>📰 News & Sentiment Analysis</h2>
-                            <div class="news-filters">
-                                <select id="news-category">
-                                    <option value="all">All News</option>
-                                    <option value="stocks">Stocks</option>
-                                    <option value="crypto">Crypto</option>
-                                    <option value="markets">Markets</option>
-                                </select>
-                                <select id="news-sentiment-filter">
-                                    <option value="all">All Sentiment</option>
-                                    <option value="positive">Positive</option>
-                                    <option value="neutral">Neutral</option>
-                                    <option value="negative">Negative</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="sentiment-overview">
-                            <div class="sentiment-gauge">
-                                <h3>Market Sentiment</h3>
-                                <div class="gauge-container">
-                                    <div class="gauge" id="sentiment-gauge">
-                                        <div class="gauge-value">68%</div>
-                                        <div class="gauge-label">Bullish</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sentiment-breakdown">
-                                <div class="sentiment-bar">
-                                    <span>Positive</span>
-                                    <div class="bar-container">
-                                        <div class="bar positive" style="width: 68%"></div>
-                                    </div>
-                                    <span>68%</span>
-                                </div>
-                                <div class="sentiment-bar">
-                                    <span>Neutral</span>
-                                    <div class="bar-container">
-                                        <div class="bar neutral" style="width: 22%"></div>
-                                    </div>
-                                    <span>22%</span>
-                                </div>
-                                <div class="sentiment-bar">
-                                    <span>Negative</span>
-                                    <div class="bar-container">
-                                        <div class="bar negative" style="width: 10%"></div>
-                                    </div>
-                                    <span>10%</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="news-articles" id="news-articles">
-                            <!-- News articles will be populated here -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Tab -->
-                <div class="tab-content" id="tab-portfolio">
-                    <div class="portfolio-container">
-                        <div class="portfolio-summary">
-                            <h2>Portfolio Overview</h2>
-                            <div class="portfolio-value">
-                                <span class="portfolio-label">Total Value</span>
-                                <span class="portfolio-amount">$100,000.00</span>
-                                <span class="portfolio-change positive">+$0.00 (+0.00%)</span>
-                            </div>
-                        </div>
-
-                        <div class="portfolio-allocation">
-                            <h3>Asset Allocation</h3>
-                            <canvas id="allocation-chart"></canvas>
-                        </div>
-
-                        <div class="holdings-list">
-                            <h3>Holdings</h3>
-                            <table class="holdings-table">
-                                <thead>
-                                    <tr>
-                                        <th>Symbol</th>
-                                        <th>Shares</th>
-                                        <th>Avg Cost</th>
-                                        <th>Current Price</th>
-                                        <th>Market Value</th>
-                                        <th>P/L</th>
-                                        <th>P/L %</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="holdings-tbody">
-                                    <tr class="no-holdings">
-                                        <td colspan="7">No positions yet. Start trading to see your holdings here.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div class="transaction-history">
-                            <h3>Transaction History</h3>
-                            <div class="history-table-container">
-                                <table class="history-table">
-                                    <thead>
-                                        <tr>
-                                            <th>Date</th>
-                                            <th>Symbol</th>
-                                            <th>Type</th>
-                                            <th>Quantity</th>
-                                            <th>Price</th>
-                                            <th>Total</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="history-tbody">
-                                        <tr class="no-history">
-                                            <td colspan="6">No transactions yet</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <a href="https://github.com/dosocob/Chat-CLI" target="_blank" class="btn btn-primary modal-btn">View on GitHub</a>
             </div>
         </div>
     </div>
 
-    <!-- Project Modals -->
     <div id="kinetic-game-modal" class="project-modal-overlay" onclick="closeProjectModal(event, 'kinetic-game')">
         <div class="project-modal" onclick="event.stopPropagation()">
             <button class="close-modal" onclick="closeProjectModal(event, 'kinetic-game')">
@@ -955,6 +441,13 @@
                                 <a href="https://github.com/dosocob" target="_blank">github.com/dosocob</a>
                             </div>
                         </div>
+                        <div class="contact-method">
+                            <div class="method-icon">💬</div>
+                            <div class="method-details">
+                                <h4>Discord</h4>
+                                <span>dosocob</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -991,7 +484,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-left">
-                    <p>&copy; 2024 dosocob. All rights reserved.</p>
+                    <p>&copy; 2026 dosocob. All rights reserved.</p>
                 </div>
                 <div class="footer-right">
                     <a href="#home" class="footer-link">Back to top ↑</a>
@@ -1000,8 +493,6 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="/assets/script.js"></script>
-    <script src="/assets/trading.js"></script>
 </body>
 </html>
