@@ -152,7 +152,7 @@
                 <h2 class="section-title">Skills & Expertise</h2>
             </div>
             <div class="skills-grid">
-                <div class="skill-card" data-skill="gamedev">
+                <div class="skill-card" data-skill="gamedev" onclick="openSkillModal('gamedev')" style="cursor: pointer;">
                     <div class="skill-icon">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
                             <rect x="6" y="12" width="28" height="16" rx="3" stroke="currentColor" stroke-width="2"/>
@@ -172,7 +172,7 @@
                     </div>
                 </div>
 
-                <div class="skill-card" data-skill="desktop">
+                <div class="skill-card" data-skill="desktop" onclick="openSkillModal('desktop')" style="cursor: pointer;">
                     <div class="skill-icon">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
                             <rect x="5" y="8" width="30" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
@@ -188,7 +188,7 @@
                     </div>
                 </div>
 
-                <div class="skill-card" data-skill="cli">
+                <div class="skill-card" data-skill="cli" onclick="openSkillModal('cli')" style="cursor: pointer;">
                     <div class="skill-icon">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
                             <rect x="5" y="8" width="30" height="24" rx="2" stroke="currentColor" stroke-width="2"/>
@@ -205,7 +205,7 @@
                     </div>
                 </div>
 
-                <div class="skill-card" data-skill="tools">
+                <div class="skill-card" data-skill="tools" onclick="openSkillModal('tools')" style="cursor: pointer;">
                     <div class="skill-icon">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
                             <path d="M15 10 L25 10 L30 20 L25 30 L15 30 L10 20 Z" stroke="currentColor" stroke-width="2"/>
@@ -294,6 +294,228 @@
             </div>
         </div>
     </section>
+
+    <!-- Skill Modals -->
+    <div id="gamedev-modal" class="project-modal-overlay" onclick="closeSkillModal(event, 'gamedev')">
+        <div class="project-modal" onclick="event.stopPropagation()">
+            <button class="close-modal" onclick="closeSkillModal(event, 'gamedev')">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="modal-header">
+                <span class="modal-icon">🎮</span>
+                <h2>Game Development</h2>
+            </div>
+            <div class="modal-content">
+                <p class="modal-description">Passionate about creating immersive gaming experiences with focus on smooth mechanics and satisfying gameplay. Particularly interested in movement-based games inspired by Source engine classics.</p>
+
+                <div class="modal-section">
+                    <h3>Core Skills</h3>
+                    <ul>
+                        <li>Custom physics implementation</li>
+                        <li>Movement systems (surfing, bhopping, air strafing)</li>
+                        <li>Level design and world building</li>
+                        <li>Player input handling and responsiveness</li>
+                        <li>Game optimization and performance</li>
+                        <li>3D modeling and asset creation</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Currently Learning</h3>
+                    <ul>
+                        <li>Advanced C++ for game engines</li>
+                        <li>Reverse engineering game mechanics</li>
+                        <li>AI and procedural generation</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Technologies</h3>
+                    <div class="modal-tech-tags">
+                        <span>C++</span>
+                        <span>C#</span>
+                        <span>Physics Engines</span>
+                        <span>3D Graphics</span>
+                        <span>Level Editors</span>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Related Project</h3>
+                    <p class="modal-description">Kinetic Game - A surfing and bhopping game with custom physics</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="desktop-modal" class="project-modal-overlay" onclick="closeSkillModal(event, 'desktop')">
+        <div class="project-modal" onclick="event.stopPropagation()">
+            <button class="close-modal" onclick="closeSkillModal(event, 'desktop')">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="modal-header">
+                <span class="modal-icon">🖥️</span>
+                <h2>Desktop Applications</h2>
+            </div>
+            <div class="modal-content">
+                <p class="modal-description">Building native desktop applications that provide seamless user experiences. Specializing in application launchers, update systems, and tools that enhance workflows.</p>
+
+                <div class="modal-section">
+                    <h3>Core Skills</h3>
+                    <ul>
+                        <li>Native application development</li>
+                        <li>Auto-update and patching systems</li>
+                        <li>File integrity verification</li>
+                        <li>Version management and rollback</li>
+                        <li>Modern UI/UX design</li>
+                        <li>Cross-platform compatibility</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Currently Learning</h3>
+                    <ul>
+                        <li>Rust for systems programming</li>
+                        <li>Electron alternatives</li>
+                        <li>Native OS integrations</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Technologies</h3>
+                    <div class="modal-tech-tags">
+                        <span>C#</span>
+                        <span>Rust</span>
+                        <span>HTTP/REST</span>
+                        <span>File Systems</span>
+                        <span>UI Frameworks</span>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Related Project</h3>
+                    <p class="modal-description">Kinetic Launcher - Game launcher with auto-updates and delta patching</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cli-modal" class="project-modal-overlay" onclick="closeSkillModal(event, 'cli')">
+        <div class="project-modal" onclick="event.stopPropagation()">
+            <button class="close-modal" onclick="closeSkillModal(event, 'cli')">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="modal-header">
+                <span class="modal-icon">💻</span>
+                <h2>CLI & Networking</h2>
+            </div>
+            <div class="modal-content">
+                <p class="modal-description">Creating command-line tools and networked applications. Focused on building efficient, lightweight programs that work directly in the terminal for developers who live in the command line.</p>
+
+                <div class="modal-section">
+                    <h3>Core Skills</h3>
+                    <ul>
+                        <li>Socket programming and TCP/IP</li>
+                        <li>Real-time bidirectional communication</li>
+                        <li>Command-line interface design</li>
+                        <li>Multi-threading and concurrency</li>
+                        <li>Network protocol implementation</li>
+                        <li>Low-level systems programming</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Currently Learning</h3>
+                    <ul>
+                        <li>Rust networking libraries</li>
+                        <li>WebSocket protocols</li>
+                        <li>Distributed systems</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Technologies</h3>
+                    <div class="modal-tech-tags">
+                        <span>Python</span>
+                        <span>Sockets</span>
+                        <span>TCP/IP</span>
+                        <span>Threading</span>
+                        <span>Linux/Unix</span>
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Related Project</h3>
+                    <p class="modal-description">Chat-CLI - Terminal-based real-time messaging application</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tools-modal" class="project-modal-overlay" onclick="closeSkillModal(event, 'tools')">
+        <div class="project-modal" onclick="event.stopPropagation()">
+            <button class="close-modal" onclick="closeSkillModal(event, 'tools')">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+            <div class="modal-header">
+                <span class="modal-icon">🛠️</span>
+                <h2>Tools & Languages</h2>
+            </div>
+            <div class="modal-content">
+                <p class="modal-description">Continuously expanding my toolkit and learning new technologies. Focused on building a strong foundation across multiple programming languages and development tools.</p>
+
+                <div class="modal-section">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Python - Scripting and automation</li>
+                        <li>C++ - Performance-critical applications</li>
+                        <li>C# - Desktop and game development</li>
+                        <li>Rust - Systems programming (learning)</li>
+                        <li>HTML/CSS/JS - Web development</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Development Tools</h3>
+                    <ul>
+                        <li>Git & GitHub for version control</li>
+                        <li>VS Code and Visual Studio</li>
+                        <li>Linux command line</li>
+                        <li>Docker basics</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Currently Learning</h3>
+                    <ul>
+                        <li>Reverse engineering with C++</li>
+                        <li>Artificial Intelligence / ML</li>
+                        <li>Advanced Rust programming</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Technologies</h3>
+                    <div class="modal-tech-tags">
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>Python</span>
+                        <span>C++</span>
+                        <span>Rust</span>
+                        <span>Web Dev</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Project Modals -->
     <div id="chat-cli-modal" class="project-modal-overlay" onclick="closeProjectModal(event, 'chat-cli')">
