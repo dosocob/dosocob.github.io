@@ -1320,6 +1320,10 @@ section {
         right: 0.75rem;
     }
 
+    .modal-buttons {
+        flex-direction: column;
+    }
+
     /* Footer mobile */
     .footer-content {
         flex-direction: column;
@@ -1554,4 +1558,15 @@ section {
     width: 100%;
     margin-top: 1rem;
     justify-content: center;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.modal-buttons .modal-btn {
+    flex: 1;
+    margin-top: 0;
 }
